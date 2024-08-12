@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
     body{
       max-width: 1200px;
-      margin: 20px auto;
+      margin: 10px auto 5px;
       padding: 0 20px;
       font-family: 'Noto Serif', serif;
 
@@ -17,11 +17,11 @@
     nav{
       display: flex;
       justify-content: space-between;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
       padding-bottom: 10px;
       border-bottom: 1px solid #ddd;
       text-transform: uppercase;
-      
+      /* height: 10vh; */
     }
     nav ul{
       display: flex;
@@ -42,10 +42,8 @@
     footer{
       color: #777;
       text-align: center;
-      margin: 80px auto 20px;
-     position: absolute;
-     bottom: 0;
-     left: 44%;
+      margin: 20px auto;
+     height: 2vh;
     }
     h2{
       margin-bottom: 40px;
@@ -56,8 +54,7 @@
     }
     .content{
       margin-left: 20px;
-     /* overflow: scroll; */
-     height: 60vh;
+     height: 70vh;
     }
 
     /* index styles */
@@ -84,20 +81,14 @@
       border-radius: 7px;
       box-shadow: 0 2px 5px #ccc;
       padding: 10px;
-      /* width: 70vw; */
-      /* margin: 16px; */
-      /* float: left; */
     }
     .details h2 {
       font-size: 1.1em;
-      /* margin-bottom: 6px;
-      border-radius: 5px; */
       background-color: whitesmoke;
       padding: 10px;
     }
     .details p {
       font-size: 1.1em;
-      /* margin-bottom: 10px; */
       white-space: pre-wrap;
       word-wrap: break-word;
     }
@@ -144,4 +135,11 @@
       border: 0;
       font-size: 1.2em;
       cursor: pointer;
+    }
+
+    @media only screen and (max-width: 850px) {
+      nav h1{
+        font-size: 2em;
+      }
+      
     }
