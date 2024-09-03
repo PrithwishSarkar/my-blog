@@ -11,7 +11,7 @@ app.set('view engine','ejs');
 app.set('views','Views');
 
 const dbURI = process.env.DB_URI;
-
+const port = process.env.PORT || 5000;
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 .then((result) => app.listen(3000))
 .catch((err) => console.log(err));
