@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
+require('dotenv').config();
 
 const blogRoutes = require('./routes/blogRoutes')
 
@@ -9,7 +10,8 @@ const app = express();
 app.set('view engine','ejs');
 app.set('views','Views');
 
-const dbURI = "mongodb+srv://nodeuser:Abcd123@nodelearn.qpw8i2d.mongodb.net/NodeTutorial?retryWrites=true&w=majority";
+const dbURI = process.env.DB_URI;
+
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
 .then((result) => app.listen(3000))
 .catch((err) => console.log(err));
